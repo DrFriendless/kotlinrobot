@@ -1,5 +1,6 @@
 import org.junit.Test
 import org.junit.Assert.assertEquals
+import org.junit.Assert.fail
 
 /**
  * Created by john on 26/08/16.
@@ -19,21 +20,25 @@ class PositionTest {
     fun testInvalidPositions() {
         try {
             Position(-1, 0, Direction.EAST)
+            fail()
         } catch (ex: IllegalArgumentException) {
             // success
         }
         try {
             Position(0, -1, Direction.EAST)
+            fail()
         } catch (ex: IllegalArgumentException) {
             // success
         }
         try {
             Position(MAXX, 0, Direction.EAST)
+            fail()
         } catch (ex: IllegalArgumentException) {
             // success
         }
         try {
             Position(0, MAXY, Direction.EAST)
+            fail()
         } catch (ex: IllegalArgumentException) {
             // success
         }

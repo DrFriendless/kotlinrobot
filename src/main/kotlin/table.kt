@@ -1,4 +1,6 @@
 /**
+ * The domain model for the table.
+ *
  * Created by john on 26/08/16.
  */
 val MAXX = 4
@@ -17,11 +19,11 @@ enum class Direction(val xDelta: Int, val yDelta: Int) {
         get() = when (this) { NORTH -> WEST; EAST -> NORTH; SOUTH -> EAST; WEST -> SOUTH }
 }
 
-fun inXBounds(x: Int): Boolean {
+private fun inXBounds(x: Int): Boolean {
     return x >= 0 && x <= MAXX
 }
 
-fun inYBounds(y: Int): Boolean {
+private fun inYBounds(y: Int): Boolean {
     return y >= 0 && y <= MAXY
 }
 
