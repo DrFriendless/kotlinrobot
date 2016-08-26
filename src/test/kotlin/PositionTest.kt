@@ -31,13 +31,13 @@ class PositionTest {
             // success
         }
         try {
-            Position(MAXX, 0, Direction.EAST)
+            Position(MAXX+1, 0, Direction.EAST)
             fail()
         } catch (ex: IllegalArgumentException) {
             // success
         }
         try {
-            Position(0, MAXY, Direction.EAST)
+            Position(0, MAXY+1, Direction.EAST)
             fail()
         } catch (ex: IllegalArgumentException) {
             // success
